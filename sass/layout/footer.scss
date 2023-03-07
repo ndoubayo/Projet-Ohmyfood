@@ -1,0 +1,16 @@
+/*partie footer*/
+footer{
+    background-color: #2b272b;
+    color: white;
+    padding: 2rem;
+    margin-top: 5rem;
+    h3{
+        font-family: 'Shrikhand', cursive;
+    }
+    .footer_elements{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}

@@ -1,0 +1,50 @@
+.principalcontener{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+/*partie resrvation et fonctionalité*/
+main{
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
+.section1 {
+    padding: 10px;
+    .fonctionnality {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .reservation {
+        margin-bottom: 3rem;
+        text-align: center;
+        .reservez {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .decouvrez {
+            font-weight: 100px;
+        }
+    }
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+        background-color: #e8e6e8;
+        border-radius: 25px;
+        padding: .3rem;
+    }
+}
+
