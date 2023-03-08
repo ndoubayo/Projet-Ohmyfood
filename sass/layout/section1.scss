@@ -7,7 +7,7 @@
 /*partie resrvation et fonctionalité*/
 main{
     font-family: 'Roboto', sans-serif;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 }
 .section1 {
@@ -25,7 +25,20 @@ main{
         }
 
         .decouvrez {
-            font-weight: 100px;
+            font-weight: normal;
+        }
+        button{
+            background: linear-gradient(to bottom, #ff79da, #9356dc);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+            box-shadow: 0 0 7px #777676; 
+            &:hover{
+                transition: 300ms all;
+                transform: scale(1.03);
+                opacity: 0.8;
+            }
         }
     }
 }
@@ -40,11 +53,25 @@ ul {
     li {
         display: flex;
         flex-direction: row;
-        gap: 1.5rem;
         align-items: center;
-        background-color: #e8e6e8;
-        border-radius: 25px;
         padding: .3rem;
+        gap: 1.5rem;
+     
+        border-radius: 25px;
+        box-shadow: 0 0 5px #a3a3a3;
+        &::before{
+            content: counter(nombre);
+            counter-increment: nombre;
+            color: white;
+            background-color: #9356DC;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: grid;
+            border-radius: 100%;
+            place-items: center;
+            position: relative;
+            left: -15px;
+        }
     }
 }
 
