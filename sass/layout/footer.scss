@@ -10,7 +10,9 @@ footer{
     .footer_elements{
         font-family: 'Roboto', sans-serif;
         display: flex;
-        gap: 1rem;
         align-items: center;
+        & p{
+            margin: .3rem;
+        }
     }
 }
