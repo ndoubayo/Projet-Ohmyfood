@@ -3,21 +3,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
 body {
-  margin: auto;
+  margin: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Entête*/
-header h1 {
+header {
   font-family: "Shrikhand", cursive;
+  position: relative;
+  box-shadow: 0 0 10px #878687;
+  padding: 5px;
+}
+header h1 {
   text-align: center;
   margin: 0;
-  box-shadow: 0 0 10px #878687;
-  position: relative;
 }
 
 .lieu {
@@ -49,21 +53,20 @@ main {
   margin: auto;
 }
 
-@media (max-width: 1100px) {
-  .section1 {
-    padding: 2rem;
-  }
-}
 .section1 .fonctionnality {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 2rem;
 }
 .section1 .reservation {
-  margin-bottom: 3rem;
   text-align: center;
-  background-color: #fafafa;
   padding: 3rem;
+}
+@media (max-width: 1100px) {
+  .section1 .reservation {
+    background-color: #efefef;
+  }
 }
 .section1 .reservation .reservez {
   font-family: "Roboto", sans-serif;
@@ -102,7 +105,7 @@ ul {
     justify-content: space-between;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 910px) {
   ul {
     flex-direction: column;
     justify-content: space-between;
@@ -141,7 +144,12 @@ ul li::before {
   flex-direction: column;
   gap: 1rem;
   padding: 10px;
-  margin-top: 2rem;
+  padding: 2rem;
+}
+@media (max-width: 1100px) {
+  .section2 {
+    background-color: #efefef;
+  }
 }
 .section2 .contenerimg {
   display: grid;
@@ -156,8 +164,20 @@ ul li::before {
   box-shadow: 0 0 10px rgb(138, 138, 138);
 }
 
+.nouveau::before {
+  content: "Nouveau";
+  background-color: aquamarine;
+  color: green;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  z-index: 2;
+  padding: 5px;
+}
+
 figure {
   margin: 0;
+  position: relative;
 }
 figure img {
   height: 10rem;
@@ -166,6 +186,7 @@ figure img {
   width: 100%;
   max-height: 100%;
   border-radius: 1rem 1rem 0 0;
+  z-index: 1;
 }
 
 figcaption :nth-child(1), figcaption :nth-child(2) {
@@ -189,6 +210,50 @@ footer .footer_elements {
 }
 footer .footer_elements p {
   margin: 0.3rem;
+}
+
+/* Partie stylisation des pages des restaurants*/
+.header-pages {
+  font-family: "Shrikhand", cursive;
+  align-items: center;
+}
+.header-pages a {
+  position: absolute;
+  left: 5%;
+  margin-top: 13px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+section .entete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section .contener-nourriture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section .contener-nourriture .qualite-nourritue {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section .menu {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+section .menu .phraseprix {
+  display: flex;
+  flex-direction: row;
+}
+section .menu .phraseprix p, section .menu .phraseprix .h3 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

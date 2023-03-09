@@ -4,12 +4,16 @@
     flex-direction: column;
     gap: 1rem;
     padding: 10px;
-    margin-top: 2rem;
+    padding: 2rem;
+    @media (max-width:1100px) {
+        background-color: #efefef;
+    }
     .contenerimg{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 2rem;
+        
     }
 }
 .resto{
@@ -17,15 +21,30 @@
     border-radius: 25px;
     box-shadow: 0 0 10px rgb(138, 138, 138);
 }
+.nouveau{
+    &::before{
+        content: "Nouveau";
+        background-color: aquamarine;
+        color: green;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        z-index: 2;
+        padding: 5px;
+    }
+}
 figure{
     margin: 0;
+    position: relative;
     img{    
     height: 10rem;
     object-fit: cover;
     max-width: 100%;
     width: 100%;
     max-height: 100%;
-    border-radius: 1rem 1rem 0 0;}
+    border-radius: 1rem 1rem 0 0;
+    z-index: 1;
+}
 }
 figcaption {
     :nth-child(1),:nth-child(2){
