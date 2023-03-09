@@ -223,36 +223,36 @@ footer .footer_elements p {
   margin-top: 13px;
 }
 
-section {
+.sectiondepage {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-section .entete {
+.sectiondepage .entete {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-section .contener-nourriture {
+.sectiondepage .contener-nourriture {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-section .contener-nourriture .qualite-nourritue {
+.sectiondepage .contener-nourriture .qualite-nourritue {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-section .menu {
+.sectiondepage .menu {
   border: 2px solid black;
   border-radius: 20px;
 }
-section .menu .phraseprix {
+.sectiondepage .menu .phraseprix {
   display: flex;
   flex-direction: row;
 }
-section .menu .phraseprix p, section .menu .phraseprix .h3 {
+.sectiondepage .menu .phraseprix p, .sectiondepage .menu .phraseprix .h3 {
   margin: 0;
 }
 
