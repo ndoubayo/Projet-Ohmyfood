@@ -35,7 +35,7 @@ main{
         }
 
         .decouvrez {
-            font-family: 'Dosis', sans-serif;
+           font-weight: 100;
         }
         button{
             background: linear-gradient(to bottom, #ff79da, #9356dc);
@@ -44,8 +44,8 @@ main{
             border-radius: 25px;
             padding: 10px;
             box-shadow: 0 0 7px #777676; 
+            
             &:hover{
-                transition: 300ms all;
                 transform: scale(1.03);
                 opacity: 0.8;
             }
@@ -76,8 +76,8 @@ ul {
         gap: 1.5rem;
         border-radius: 25px;
         box-shadow: 0 0 5px #a3a3a3;
+        transition: 400ms all;
         &:hover{
-            transition: 400ms all;
             transform: scale(1.03);
         }
         &::before{

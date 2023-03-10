@@ -74,7 +74,7 @@ main {
   margin: 0;
 }
 .section1 .reservation .decouvrez {
-  font-family: "Dosis", sans-serif;
+  font-weight: 100;
 }
 .section1 .reservation button {
   background: linear-gradient(to bottom, #ff79da, #9356dc);
@@ -85,7 +85,6 @@ main {
   box-shadow: 0 0 7px #777676;
 }
 .section1 .reservation button:hover {
-  transition: 300ms all;
   transform: scale(1.03);
   opacity: 0.8;
 }
@@ -119,9 +118,9 @@ ul li {
   gap: 1.5rem;
   border-radius: 25px;
   box-shadow: 0 0 5px #a3a3a3;
+  transition: 400ms all;
 }
 ul li:hover {
-  transition: 400ms all;
   transform: scale(1.03);
 }
 ul li::before {
@@ -157,6 +156,12 @@ ul li::before {
   grid-template-rows: 1fr 1fr;
   gap: 2rem;
 }
+@media (max-width: 600px) {
+  .section2 .contenerimg {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 
 .resto {
   background-color: rgb(255, 255, 255);
@@ -189,8 +194,29 @@ figure img {
   z-index: 1;
 }
 
+figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 figcaption :nth-child(1), figcaption :nth-child(2) {
-  margin: 0.5rem;
+  margin: 0.3rem;
+}
+figcaption .icon_contener {
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  width: 1rem;
+  height: 1rem;
+  right: 10%;
+  top: 175px;
+}
+figcaption .icon_contener i {
+  position: absolute;
+  font-size: 2rem;
+}
+figcaption .icon_contener i .fa-solid {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*partie footer*/
@@ -201,15 +227,21 @@ footer {
   margin-top: 5rem;
 }
 footer h3 {
+  font-weight: 500;
   font-family: "Shrikhand", cursive;
+  margin-bottom: 2.5rem;
 }
 footer .footer_elements {
   font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
+  margin-bottom: 0.7rem;
 }
-footer .footer_elements p {
-  margin: 0.3rem;
+footer .with_icon .fork {
+  margin-right: 0.9rem;
+}
+footer .with_icon .hand {
+  margin-right: 0.5rem;
 }
 
 /* Partie stylisation des pages des restaurants*/
@@ -223,37 +255,66 @@ footer .footer_elements p {
   margin-top: 13px;
 }
 
+.mainpages {
+  position: relative;
+}
+.mainpages img {
+  position: absolute;
+  z-index: 1;
+  height: 25rem;
+  width: 100%;
+}
+
 .sectiondepage {
+  position: absolute;
+  z-index: 2;
+  top: 320px;
+  left: 0px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  border-radius: 30px 30px 0px 0px;
+  background-color: rgb(245, 246, 247);
 }
 .sectiondepage .entete {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 .sectiondepage .contener-nourriture {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.sectiondepage .contener-nourriture .qualite-nourritue {
+@media (max-width: 1150px) {
+  .sectiondepage .contener-nourriture {
+    grid-template-columns: 1fr;
+  }
+}
+.sectiondepage .contener-nourriture .qualite-nourriture {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 .sectiondepage .menu {
-  border: 2px solid black;
   border-radius: 20px;
+  padding: 2px;
+  background-color: white;
+  box-shadow: 0 0 5px #a3a3a3;
+  padding: 5px;
+}
+.sectiondepage .menu .nomduplat {
+  margin: 0.2rem;
 }
 .sectiondepage .menu .phraseprix {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-.sectiondepage .menu .phraseprix p, .sectiondepage .menu .phraseprix .h3 {
-  margin: 0;
+.sectiondepage .menu .phraseprix p {
+  margin: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

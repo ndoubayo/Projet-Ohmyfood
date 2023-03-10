@@ -13,6 +13,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 2rem;
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
         
     }
 }
@@ -47,7 +51,29 @@ figure{
 }
 }
 figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     :nth-child(1),:nth-child(2){
-        margin: .5rem;
+        margin: .3rem;
     }
+    .icon_contener{
+        background: linear-gradient(to bottom, #ff79da, #9356dc);
+        width: 1rem;
+        height: 1rem;
+       
+        right: 10%;
+        top: 175px;
+        i {
+                position: absolute;
+                font-size: 2rem;
+                
+                .fa-solid{
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+    }
+    
 }
