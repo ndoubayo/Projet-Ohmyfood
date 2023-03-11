@@ -195,28 +195,18 @@ figure img {
 }
 
 figcaption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
 }
-figcaption :nth-child(1), figcaption :nth-child(2) {
+figcaption h3, figcaption p {
   margin: 0.3rem;
 }
-figcaption .icon_contener {
-  background: linear-gradient(to bottom, #ff79da, #9356dc);
-  width: 1rem;
-  height: 1rem;
-  right: 10%;
-  top: 175px;
-}
-figcaption .icon_contener i {
-  position: absolute;
+figcaption i {
   font-size: 2rem;
-}
-figcaption .icon_contener i .fa-solid {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*partie footer*/

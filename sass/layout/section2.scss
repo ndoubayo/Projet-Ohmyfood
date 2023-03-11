@@ -37,43 +37,33 @@
         padding: 5px;
     }
 }
-figure{
+figure {
     margin: 0;
     position: relative;
-    img{    
-    height: 10rem;
-    object-fit: cover;
-    max-width: 100%;
-    width: 100%;
-    max-height: 100%;
-    border-radius: 1rem 1rem 0 0;
-    z-index: 1;
-}
+
+    img {
+        height: 10rem;
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        border-radius: 1rem 1rem 0 0;
+        z-index: 1;
+    }
 }
 figcaption {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    :nth-child(1),:nth-child(2){
+    padding: .5rem;
+    position: relative;
+    h3, p{
         margin: .3rem;
     }
-    .icon_contener{
-        background: linear-gradient(to bottom, #ff79da, #9356dc);
-        width: 1rem;
-        height: 1rem;
-       
-        right: 10%;
-        top: 175px;
+ 
         i {
-                position: absolute;
-                font-size: 2rem;
-                
-                .fa-solid{
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                }
+             font-size: 2rem;
+             position: absolute;
+             right: 1rem;
+             top: 50%;
+            transform: translateY(-50%);
             }
-    }
     
 }
