@@ -54,16 +54,36 @@ figure {
 figcaption {
     padding: .5rem;
     position: relative;
-    h3, p{
+
+    h3,
+    p {
         margin: .3rem;
     }
- 
-        i {
-             font-size: 2rem;
-             position: absolute;
-             right: 1rem;
-             top: 50%;
-            transform: translateY(-50%);
-            }
-    
+
+    i {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        /*&:hover:before{
+            transition: all .5s ease-in-out;
+            -webkit-background-clip: text;
+            font-weight: 900;
+            background-image: linear-gradient(to left, #ab74f0, #c168eb, #dc77e7, #fa81ee, #f89dde);
+            -webkit-text-fill-color: transparent;*/
+    }
+    .fa-solid {
+        color: transparent;
+        opacity: 0;
+        transition: all 400ms ;
+        
+    }
+    &:hover .fa-solid{
+        background: linear-gradient(to bottom, #ff79da, #9356dc);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 1;
+    }
 }
