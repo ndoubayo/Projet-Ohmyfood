@@ -418,7 +418,7 @@ footer .with_icon .hand {
   padding: 0.7rem;
 }
 .menu .dishname::after {
-  counter: "";
+  content: "";
   background-color: #99e2d0;
   width: 2.5rem;
   height: 0.3rem;
@@ -448,9 +448,6 @@ footer .with_icon .hand {
   margin-right: -3.5rem;
   width: 3.5rem;
   transition-duration: 500ms;
-  /* @media (max-width: 480px) {
-       transform: scale(0);
-   }*/
 }
 .menu__chechbox .menu__contener-icone {
   display: flex;

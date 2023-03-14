@@ -138,7 +138,7 @@
         padding: .7rem;
     }
     .dishname::after{
-        counter:"" ;
+        content:"" ;
         background-color: #99e2d0;
         width: 2.5rem;
         height:.3rem;
@@ -170,9 +170,6 @@
         margin-right: -3.5rem;
         width: 3.5rem;
         transition-duration: 500ms;
-       /* @media (max-width: 480px) {
-            transform: scale(0);
-        }*/
         .menu__contener-icone {
             display: flex;
             align-items: center;
