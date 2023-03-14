@@ -292,7 +292,6 @@ footer .with_icon .hand {
 
 .sectiondepage {
   margin-top: -70px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 30px 30px 0px 0px;
@@ -306,47 +305,81 @@ footer .with_icon .hand {
   padding: 1rem;
   font-family: "shrikhand", "cursive";
 }
+.sectiondepage .entete .contener_icone-entete {
+  position: relative;
+  cursor: pointer;
+}
+.sectiondepage .entete .contener_icone-entete i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sectiondepage .entete .contener_icone-entete .fa-solid {
+  color: transparent;
+  opacity: 0;
+  transition: all 400ms ease-in;
+}
+.sectiondepage .entete .contener_icone-entete:hover .fa-solid {
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+}
 .sectiondepage .contener-nourriture {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
-@media (max-width: 1150px) {
+@media (min-width: 1150px) {
   .sectiondepage .contener-nourriture {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-.sectiondepage .contener-nourriture .qualite-nourriture {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.sectiondepage .contener-nourriture .categorie-de-menu {
+  max-width: 100%;
+  overflow: hidden;
   padding: 1rem;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-0 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-0 {
   animation-delay: 0s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-1 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-1 {
   animation-delay: 0.1s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-2 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-2 {
   animation-delay: 0.2s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-3 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-3 {
   animation-delay: 0.3s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-4 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-4 {
   animation-delay: 0.4s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-5 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-5 {
   animation-delay: 0.5s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-6 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-6 {
   animation-delay: 0.6s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-7 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-7 {
   animation-delay: 0.7s;
 }
-.sectiondepage .contener-nourriture .qualite-nourriture .delai-8 {
+.sectiondepage .contener-nourriture .categorie-de-menu .delai-8 {
   animation-delay: 0.8s;
+}
+.sectiondepage .contener-nourriture .categorie-de-menu .title {
+  padding-bottom: 0.6rem;
+  position: relative;
+}
+.sectiondepage .contener-nourriture .categorie-de-menu .title::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .sectiondepage .explorer {
   background: linear-gradient(to bottom, #ff79da, #9356dc);
@@ -373,13 +406,22 @@ footer .with_icon .hand {
 /* manipulation de menu et de l'animition check*/
 .menu {
   border-radius: 20px;
-  padding: 2px;
   background-color: white;
   box-shadow: 0 0 5px #a3a3a3;
-  padding: 5px;
+  margin: 1rem 0;
+  overflow: hidden;
   display: flex;
   animation: apparition 500ms;
   animation-timing-function: cubic-bezier(0.48, 1.22, 0.36, 0.81);
+}
+.menu__sentences {
+  padding: 0.7rem;
+}
+.menu .dishname::after {
+  counter: "";
+  background-color: #99e2d0;
+  width: 2.5rem;
+  height: 0.3rem;
 }
 .menu__sentences,
 .menu .dishname,
@@ -395,18 +437,20 @@ footer .with_icon .hand {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 0.5rem;
+  margin-left: auto;
+  padding: 0.5rem;
 }
 .menu__chechbox {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #99e2d0;
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
-  opacity: 0;
+  margin-right: -3.5rem;
+  width: 3.5rem;
   transition-duration: 500ms;
-  transform: scale(0);
+  /* @media (max-width: 480px) {
+       transform: scale(0);
+   }*/
 }
 .menu__chechbox .menu__contener-icone {
   display: flex;
@@ -423,9 +467,7 @@ footer .with_icon .hand {
   color: #99e2d0;
 }
 .menu:hover .menu__chechbox {
-  margin-right: -1rem;
-  opacity: 1;
-  transform: scale(1);
+  margin-right: 0;
 }
 .menu:hover .menu__contener-icone {
   transform: rotate(0);
