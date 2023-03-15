@@ -22,3 +22,77 @@ header {
     padding: 0;
     gap: 1rem;
 }
+.loader{
+    position: fixed;
+    inset: 0;
+    background-color:white;
+    height: 100vh;
+    z-index: 3;
+    opacity: .9;
+    display: grid;
+    place-items: center;
+    animation: disparition-loader 800ms  3300ms both;
+    transform-origin: bottom;
+   .spiner{
+    display: block;
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    border: 5px solid transparent;
+    border-top-color: #9356dc;
+    border-right-color: #9356dc;
+    border-bottom-color: #9356dc;
+    animation: spiner 2s linear infinite;
+   }
+   .spiner::before, .spiner::after{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    border: 5px solid transparent;
+   }
+   .spiner::before{
+    inset: 7px;
+    border-top-color: #ff79da;
+    border-right-color: #ff79da;
+    animation: spinerbefore 3s linear infinite;
+   }
+   .spiner::after{
+    inset: 20px;
+    border-top-color: #99e2d0;
+    animation: spinerafter 1.5s linear infinite;
+   }
+}
+/*Gestion des keyframes*/
+@keyframes disparition-loader {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+@keyframes spiner {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinerbefore {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinerafter {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
