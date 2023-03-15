@@ -12,71 +12,6 @@ a {
   cursor: pointer;
 }
 
-/* Entête*/
-header {
-  font-family: "Shrikhand", cursive;
-  position: relative;
-  box-shadow: 0 0 10px #878687;
-  padding: 5px;
-}
-header h1 {
-  text-align: center;
-  margin: 0;
-}
-
-.lieu {
-  font-family: "Roboto", sans-serif;
-  background-color: #e8e6e8;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  gap: 1rem;
-}
-
-.loader {
-  position: fixed;
-  inset: 0;
-  background-color: white;
-  height: 100vh;
-  z-index: 3;
-  opacity: 0.9;
-  display: grid;
-  place-items: center;
-  animation: disparition-loader 800ms 3300ms both;
-  transform-origin: bottom;
-}
-.loader .spiner {
-  display: block;
-  position: relative;
-  height: 70px;
-  width: 70px;
-  border-radius: 100%;
-  border: 5px solid transparent;
-  border-top-color: #9356dc;
-  border-right-color: #9356dc;
-  border-bottom-color: #9356dc;
-  animation: spiner 2s linear infinite;
-}
-.loader .spiner::before, .loader .spiner::after {
-  content: "";
-  position: absolute;
-  border-radius: 100%;
-  border: 5px solid transparent;
-}
-.loader .spiner::before {
-  inset: 7px;
-  border-top-color: #ff79da;
-  border-right-color: #ff79da;
-  animation: spinerbefore 3s linear infinite;
-}
-.loader .spiner::after {
-  inset: 20px;
-  border-top-color: #99e2d0;
-  animation: spinerafter 1.5s linear infinite;
-}
-
 /*Gestion des keyframes*/
 @keyframes disparition-loader {
   from {
@@ -110,6 +45,70 @@ header h1 {
     transform: rotate(360deg);
   }
 }
+/* Entête*/
+header {
+  font-family: "Shrikhand", cursive;
+  position: relative;
+  box-shadow: 0 0 10px #878687;
+  padding: 5px;
+}
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.lieu {
+  font-family: "Roboto", sans-serif;
+  background-color: #e8e6e8;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 1rem;
+}
+
+/* loder de chargement*/
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  height: 100vh;
+  z-index: 3;
+  opacity: 0.9;
+  display: grid;
+  place-items: center;
+  animation: disparition-loader 800ms 3300ms both;
+  transform-origin: bottom;
+}
+.loader .spiner {
+  display: block;
+  position: relative;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  border: 5px solid #9356dc;
+  border-left-color: transparent;
+  animation: spiner 2s linear infinite;
+}
+.loader .spiner::before, .loader .spiner::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  border: 5px solid transparent;
+}
+.loader .spiner::before {
+  inset: 7px;
+  border-top-color: #ff79da;
+  border-right-color: #ff79da;
+  animation: spinerbefore 3s linear infinite;
+}
+.loader .spiner::after {
+  inset: 20px;
+  border-top-color: #99e2d0;
+  animation: spinerafter 1.5s linear infinite;
+}
+
 .principalcontener {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -140,7 +139,7 @@ main {
 }
 @media (max-width: 1100px) {
   .section1 .reservation {
-    background-color: #efefef;
+    background-color: rgb(245, 246, 247);
   }
 }
 .section1 .reservation .reservez {
@@ -157,11 +156,12 @@ main {
   border: none;
   border-radius: 25px;
   padding: 10px;
-  box-shadow: 0 0 7px #777676;
+  box-shadow: 0 0 5px #a3a3a3;
 }
 .section1 .reservation button:hover {
   transform: scale(1.03);
   opacity: 0.8;
+  box-shadow: 0 0 7px #777676;
 }
 
 ul {
@@ -182,7 +182,6 @@ ul {
 @media (max-width: 910px) {
   ul {
     flex-direction: column;
-    justify-content: space-between;
   }
 }
 ul li {
@@ -202,7 +201,7 @@ ul li::before {
   content: counter(nombre);
   counter-increment: nombre;
   color: white;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 1.5rem;
   height: 1.5rem;
   display: grid;
@@ -222,7 +221,7 @@ ul li::before {
 }
 @media (max-width: 1100px) {
   .section2 {
-    background-color: #efefef;
+    background-color: rgb(245, 246, 247);
   }
 }
 .section2 .contenerimg {
@@ -241,13 +240,13 @@ ul li::before {
 .resto {
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
-  box-shadow: 0 0 10px rgb(138, 138, 138);
+  box-shadow: 0 0 5px #a3a3a3;
 }
 
 .nouveau::before {
   content: "Nouveau";
   background-color: aquamarine;
-  color: green;
+  color: rgb(15, 67, 15);
   position: absolute;
   right: 5%;
   top: 5%;
@@ -299,10 +298,20 @@ figcaption:hover .fa-solid {
 @media (max-width: 850) {
   figcaption:active .fa-solid {
     background: linear-gradient(to bottom, #ff79da, #9356dc);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 0 5px #a3a3a3;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     opacity: 1;
+  }
+  figcaption:active .fa-solid:hover {
+    transform: scale(1.03);
+    opacity: 0.8;
+    box-shadow: 0 0 7px #777676;
   }
 }
 
@@ -459,26 +468,24 @@ footer .with_icon .hand {
   left: 0;
   bottom: 0;
 }
-.sectiondepage .explorer {
+.sectiondepage .btn-commander {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.sectiondepage .btn-commander .commander {
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   color: white;
   border: none;
   border-radius: 25px;
   padding: 10px;
-  box-shadow: 0 0 7px #777676;
+  box-shadow: 0 0 5px #a3a3a3;
   margin: 3.5rem 0;
-  width: 8rem;
-  margin-left: 45%;
 }
-@media (max-width: 600px) {
-  .sectiondepage .explorer {
-    margin-left: 37%;
-  }
-}
-@media (max-width: 300px) {
-  .sectiondepage .explorer {
-    margin-left: 27%;
-  }
+.sectiondepage .btn-commander .commander:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
+  box-shadow: 0 0 7px #777676;
 }
 
 /* manipulation de menu et de l'animition check*/
@@ -490,7 +497,7 @@ footer .with_icon .hand {
   overflow: hidden;
   display: flex;
   animation: apparition 500ms;
-  animation-timing-function: cubic-bezier(0.48, 1.22, 0.36, 0.81);
+  animation-timing-function: cubic-bezier(0.49, 1.28, 0.4, 0.81);
 }
 .menu__sentences {
   padding: 0.7rem;

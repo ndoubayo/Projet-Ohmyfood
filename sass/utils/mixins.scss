@@ -1,0 +1,44 @@
+
+@mixin principal-box-shadow{
+    box-shadow: 0 0 5px #a3a3a3;
+}
+
+@mixin box-shadow-hover{
+    box-shadow: 0 0 7px #777676; 
+}
+
+@mixin gradient-button{
+    background: linear-gradient(to bottom, #ff79da, #9356dc);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 0 5px #a3a3a3;
+    &:hover{
+        transform: scale(1.03);
+        opacity: 0.8;
+        box-shadow: 0 0 7px #777676; 
+    }
+}
+@mixin heart-animation{
+    i {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .fa-solid {
+        color: transparent;
+        opacity: 0;
+        transition: all 400ms ease-in;
+        
+    }
+    &:hover .fa-solid{
+        background: linear-gradient(to bottom, #ff79da, #9356dc);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 1;
+    }//fin de la mixin
+}

@@ -1,3 +1,5 @@
+@use"../utils/mixins";
+@use"../utils/variables.scss";
 /* Partie stylisation des pages des restaurants*/ 
 .header-pages{
     font-family: 'Shrikhand', cursive;
@@ -47,27 +49,7 @@
         .contener_icone-entete{
             position: relative;
             cursor: pointer;
-            //Insertion de la mixin
-            i {
-                font-size: 2rem;
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .fa-solid {
-                color: transparent;
-                opacity: 0;
-                transition: all 400ms ease-in;
-                
-            }
-            &:hover .fa-solid{
-                background: linear-gradient(to bottom, #ff79da, #9356dc);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                opacity: 1;
-            }//fin de la mixin
+            @include mixins.heart-animation;
         }
     }
 
@@ -102,36 +84,26 @@
     }
     
 //Parie du bouton commander
-    .explorer {
-        background: linear-gradient(to bottom, #ff79da, #9356dc);
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 10px;
-        box-shadow: 0 0 7px #777676;
-        margin: 3.5rem 0;
-        width: 8rem;
-        margin-left: 45%;
+    .btn-commander{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        .commander {
+            @include mixins.gradient-button;
+            margin: 3.5rem 0;
+    }}
 
-        @media (max-width:600px) {
-            margin-left: 37%;
-        }
-
-        @media (max-width:300px) {
-            margin-left: 27%;
-        }
-    }
 }
 /* manipulation de menu et de l'animition check*/
 .menu {
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 0 5px #a3a3a3;
+    @include mixins.principal-box-shadow;
     margin: 1rem 0;
     overflow: hidden;
     display: flex;
     animation: apparition 500ms;
-    animation-timing-function: cubic-bezier(.48, 1.22, .36, .81);
+    animation-timing-function: cubic-bezier(.49, 1.28, .4, .81);
     // transform: scale(0);
 
     &__sentences{

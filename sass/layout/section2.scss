@@ -1,3 +1,5 @@
+@use"../utils/mixins";
+@use"../utils/variables.scss";
 /* Affichage des restaurants*/
 .section2{
     display: flex;
@@ -6,7 +8,7 @@
     padding: 10px;
     padding: 2rem;
     @media (max-width:1100px) {
-        background-color: #efefef;
+        background-color: variables.$principal-dark-background;
     }
     .contenerimg{
         display: grid;
@@ -23,13 +25,13 @@
 .resto{
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
-    box-shadow: 0 0 10px rgb(138, 138, 138);
+    @include mixins.principal-box-shadow;
 }
 .nouveau{
     &::before{
         content: "Nouveau";
         background-color: aquamarine;
-        color: green;
+        color: rgb(15, 67, 15);
         position: absolute;
         right: 5%;
         top: 5%;
@@ -60,29 +62,10 @@ figcaption {
         margin: .3rem;
     }
 //pour faire une mixin
-    i {
-        font-size: 2rem;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .fa-solid {
-        color: transparent;
-        opacity: 0;
-        transition: all 400ms ease-in;
-        
-    }
-    &:hover .fa-solid{
-        background: linear-gradient(to bottom, #ff79da, #9356dc);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 1;
-    }//fin de la mixin
+    @include mixins.heart-animation;
     @media (max-width:850) {
         &:active .fa-solid{
-            background: linear-gradient(to bottom, #ff79da, #9356dc);
+           @include mixins.gradient-button;
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
