@@ -43,6 +43,9 @@ main{
         }
     }
 }
+#fonction{
+    margin: 0 0 1rem 0;
+}
 ul {
     counter-reset: nombre;
     display: flex;
@@ -69,6 +72,7 @@ ul {
         transition: 400ms all;
         &:hover{
             transform: scale(1.03);
+            @include mixins.box-shadow-hover;
         }
         &::before{
             content: counter(nombre);

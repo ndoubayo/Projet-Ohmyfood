@@ -157,11 +157,16 @@ main {
   border-radius: 25px;
   padding: 10px;
   box-shadow: 0 0 5px #a3a3a3;
+  transition: all 400ms;
 }
 .section1 .reservation button:hover {
   transform: scale(1.03);
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 0 0 7px #777676;
+}
+
+#fonction {
+  margin: 0 0 1rem 0;
 }
 
 ul {
@@ -196,6 +201,7 @@ ul li {
 }
 ul li:hover {
   transform: scale(1.03);
+  box-shadow: 0 0 7px #777676;
 }
 ul li::before {
   content: counter(nombre);
@@ -246,6 +252,7 @@ ul li::before {
 .nouveau::before {
   content: "Nouveau";
   background-color: aquamarine;
+  border-radius: 3px;
   color: rgb(15, 67, 15);
   position: absolute;
   right: 5%;
@@ -285,7 +292,6 @@ figcaption i {
 }
 figcaption .fa-solid {
   color: transparent;
-  opacity: 0;
   transition: all 400ms ease-in;
 }
 figcaption:hover .fa-solid {
@@ -303,6 +309,7 @@ figcaption:hover .fa-solid {
     border-radius: 25px;
     padding: 10px;
     box-shadow: 0 0 5px #a3a3a3;
+    transition: all 400ms;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -310,7 +317,7 @@ figcaption:hover .fa-solid {
   }
   figcaption:active .fa-solid:hover {
     transform: scale(1.03);
-    opacity: 0.8;
+    opacity: 0.9;
     box-shadow: 0 0 7px #777676;
   }
 }
@@ -402,7 +409,6 @@ footer .with_icon .hand {
 }
 .sectiondepage .entete .contener_icone-entete .fa-solid {
   color: transparent;
-  opacity: 0;
   transition: all 400ms ease-in;
 }
 .sectiondepage .entete .contener_icone-entete:hover .fa-solid {
@@ -480,11 +486,12 @@ footer .with_icon .hand {
   border-radius: 25px;
   padding: 10px;
   box-shadow: 0 0 5px #a3a3a3;
+  transition: all 400ms;
   margin: 3.5rem 0;
 }
 .sectiondepage .btn-commander .commander:hover {
   transform: scale(1.03);
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 0 0 7px #777676;
 }
 
