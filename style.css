@@ -194,14 +194,21 @@ ul li {
   flex-direction: row;
   align-items: center;
   padding: 0.3rem;
-  gap: 1.5rem;
+  gap: 1rem;
   border-radius: 25px;
   box-shadow: 0 0 5px #a3a3a3;
   transition: 400ms all;
 }
+ul li i {
+  color: #898686;
+}
+ul li:hover i {
+  color: #9356dc;
+}
 ul li:hover {
   transform: scale(1.03);
   box-shadow: 0 0 7px #777676;
+  background-color: #f5edfc;
 }
 ul li::before {
   content: counter(nombre);
@@ -289,6 +296,11 @@ figcaption i {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 280px) {
+  figcaption i {
+    opacity: 0;
+  }
 }
 figcaption .fa-solid {
   color: transparent;
@@ -406,6 +418,11 @@ footer .with_icon .hand {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 280px) {
+  .sectiondepage .entete .contener_icone-entete i {
+    opacity: 0;
+  }
 }
 .sectiondepage .entete .contener_icone-entete .fa-solid {
   color: transparent;

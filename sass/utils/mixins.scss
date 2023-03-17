@@ -21,6 +21,9 @@
         box-shadow: 0 0 7px #777676; 
     }
 }
+@mixin background-hover-li{
+    background-color: #f5edfc;
+}
 @mixin heart-animation{
     i {
         font-size: 2rem;
@@ -28,6 +31,9 @@
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
+        @media (max-width: 280px) {
+            opacity: 0;
+        }
     }
     .fa-solid {
         color: transparent;
