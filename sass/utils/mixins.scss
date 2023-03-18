@@ -37,8 +37,8 @@
     }
     .fa-solid {
         color: transparent;
-        
-        transition: all 400ms ease-in;
+        opacity: 0;
+        transition: all 500ms ease-out;
         
     }
     &:hover .fa-solid{
