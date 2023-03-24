@@ -7,6 +7,11 @@
     box-shadow: 0 0 7px #777676; 
 }
 
+@mixin degraded-color{
+    background: linear-gradient(to bottom, #ff79da, #9356dc);
+}
+
+
 @mixin gradient-button{
     background: linear-gradient(to bottom, #ff79da, #9356dc);
     color: white;

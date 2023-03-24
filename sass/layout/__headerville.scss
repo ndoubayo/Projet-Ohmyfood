@@ -26,7 +26,7 @@ header {
     padding: 0;
     gap: 1rem;
 }
-/* loder de chargement*/
+/* loader de chargement*/
 .loader{
     position: fixed;
     inset: 0;
@@ -36,7 +36,7 @@ header {
     opacity: .9;
     display: grid;
     place-items: center;
-    animation: disparition-loader 800ms  3300ms both;
+    animation: disparition-loader 400ms  3000ms both;
     transform-origin: bottom;
    .spiner{
     display: block;
@@ -46,6 +46,7 @@ header {
     border-radius: 100%;
     border: 5px solid  variables.$color-primary;
     border-left-color: transparent;
+    border-right-color: transparent;
     animation: spiner 2s linear infinite;
    }
    .spiner::before, .spiner::after{
@@ -56,13 +57,17 @@ header {
    }
    .spiner::before{
     inset: 7px;
-    border-top-color: variables.$color-secondary;
-    border-right-color: variables.$color-secondary;
-    animation: spinerbefore 3s linear infinite;
+    border: 5px solid  variables.$color-secondary;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: spinerbefore 1s linear infinite;
    }
    .spiner::after{
     inset: 20px;
-    border-top-color: variables.$color-tertiary;
+    border: 5px solid  variables.$color-tertiary;
+    background-color: variables.$color-tertiary;
+    border-left-color: transparent;
+    border-right-color: transparent;
     animation: spinerafter 1.5s linear infinite;
    }
 }
