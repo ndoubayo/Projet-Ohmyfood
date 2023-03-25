@@ -109,7 +109,7 @@ header h1 {
   animation: spinerbefore 1s linear infinite;
 }
 .loader .spiner::after {
-  inset: 20px;
+  inset: 25px;
   border: 5px solid #99e2d0;
   background-color: #99e2d0;
   border-left-color: transparent;
@@ -327,6 +327,14 @@ footer {
   color: white;
   padding: 2rem;
 }
+@media (min-width: 601px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 footer h3 {
   font-weight: 500;
   font-family: "Shrikhand", cursive;
@@ -371,7 +379,7 @@ footer .with_icon .hand {
 
 .contener-img img {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   display: block;
 }
 @media (max-width: 600px) {
@@ -553,7 +561,7 @@ footer .with_icon .hand {
   height: 1.3rem;
   width: 1.3rem;
   background-color: white;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
   transition-duration: 500ms;
   border-radius: 100%;
 }

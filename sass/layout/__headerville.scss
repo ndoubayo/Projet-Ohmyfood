@@ -63,7 +63,7 @@ header {
     animation: spinerbefore 1s linear infinite;
    }
    .spiner::after{
-    inset: 20px;
+    inset: 25px;
     border: 5px solid  variables.$color-tertiary;
     background-color: variables.$color-tertiary;
     border-left-color: transparent;
