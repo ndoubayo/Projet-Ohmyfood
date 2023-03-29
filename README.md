@@ -14,4 +14,4 @@ Pour  ce projet vous devez installer Sass dans votre machine puis l'executer dan
   cd Projet-Ohmyfood
 ```
     
-
+![Accueil](https://user-images.githubusercontent.com/115634872/228569059-4fb9aeef-4bd3-4022-882b-8d6ad707935e.png)
