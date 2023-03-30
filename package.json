@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:style.css"
+    "sass": "sass --watch ./sass/main.scss:./Styles/style.css",
+    "prefix": "postcss ./Styles/style.css --use autoprefixer -d ./prefixedCSS"
   },
   "author": "Franklin Ndoubayo",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
