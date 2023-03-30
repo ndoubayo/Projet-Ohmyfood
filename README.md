@@ -11,13 +11,16 @@ Pour  ce projet vous devez installer Sass dans votre machine puis l'executer dan
 
 ```bash
   npm install sass -g ou npm install sass --save-dev
-  cd Projet-Ohmyfood
 ```
 
 ## FAQ
 
 #### Comment travailler sur le projet?
-
+Une fois Sass installé et configur, accedez au projet et lancez ce script:
+```bash
+cd projet-ohmyfood
+npm run sass
+```
 L'installation de l'extension vscode "live sass compiler" vous sera d'une grande aide concernant ce dépôt. Veillez l’installer afin de compiler… 
 
 #### A quoi consiste-t-il?
