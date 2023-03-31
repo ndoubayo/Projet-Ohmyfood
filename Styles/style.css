@@ -552,7 +552,7 @@ footer .with_icon .hand {
   background-color: #99e2d0;
   margin-right: -3.5rem;
   width: 3.5rem;
-  transition-duration: 500ms;
+  transition: all 500ms;
 }
 .menu__chechbox .menu__contener-icone {
   display: flex;
