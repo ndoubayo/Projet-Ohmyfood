@@ -7,7 +7,7 @@ Ce Dépôt Git contient des fichiers de la réalisation d'un site de commande de
 
 ## Installation
 
-Pour  ce projet vous devez installer Sass dans votre machine ou simplement dans le projet avec les dépendances puis l'executer dans votre package.json
+Pour  ce projet vous devez installer Sass dans votre machine ou simplement dans le projet avec les dépendances puis l'executer depuis le fichier package.json
 
 ```bash
   npm install sass -g ou npm install sass --save-dev
