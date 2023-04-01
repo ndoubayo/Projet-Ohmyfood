@@ -170,7 +170,7 @@ main {
 .section1 .reservation button:hover {
   transform: scale(1.03);
   opacity: 0.9;
-  box-shadow: 0 0 7px #777676;
+  box-shadow: 0 0 6px #777676;
 }
 
 #fonction {
@@ -505,7 +505,7 @@ footer .with_icon .hand {
 .sectiondepage .btn-commander .commander:hover {
   transform: scale(1.03);
   opacity: 0.9;
-  box-shadow: 0 0 7px #777676;
+  box-shadow: 0 0 6px #777676;
 }
 
 /* manipulation de menu et de l'animition check*/
