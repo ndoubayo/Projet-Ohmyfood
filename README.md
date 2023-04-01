@@ -7,7 +7,7 @@ Ce Dépôt Git contient des fichiers de la réalisation d'un site de commande de
 
 ## Installation
 
-Pour  ce projet vous devez installer Sass dans votre machine puis l'executer dans votre package.json
+Pour  ce projet vous devez installer Sass dans votre machine ou simplement dans le projet puis l'executer dans votre package.json
 
 ```bash
   npm install sass -g ou npm install sass --save-dev
@@ -16,7 +16,7 @@ Pour  ce projet vous devez installer Sass dans votre machine puis l'executer dan
 ## FAQ
 
 #### Comment travailler sur le projet?
-Une fois Sass installé et configur, accedez au projet et lancez ce script:
+Une fois Sass installé et configuré, accedez au projet et lancez ce script:
 ```bash
 cd projet-ohmyfood
 npm run sass
@@ -26,6 +26,8 @@ L'installation de l'extension vscode "live sass compiler" vous sera d'une grande
 #### A quoi consiste-t-il?
 
 Le projet Ohmyfood consiste à concevoir quatre pages de restaurants et une page d'accueil du site Ohmyfood comme l'indique les maquettes dans le dossier "Maquette Ohmyfood".
+## Technologies Utilisées
+#### Sass, Postcss, Postcss-cli, Autoprefixer. 
 
 ## La maquette de la page d'accueil du site.
     
