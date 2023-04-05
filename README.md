@@ -1,13 +1,13 @@
 
 # Projet-Ohmyfood
 
-Ce Dépôt Git contient des fichiers de la réalisation d'un site de commande de nourriture en ligne "ohmyfood". Les diffrents fichiers sont accessibles depuis ce dépôt. 
+Ce Dépôt Git contient des fichiers de la réalisation d'un site de commande de nourriture en ligne "ohmyfood".Projet des cours chez [Openclassroom](https://openclasroom.com), notament sur les cours [Créeez des animations CSS modernes](https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes) et [Simplifiez vous le CSS avec Sass](https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass). Les diffrents fichiers sont accessibles depuis ce dépôt. 
 
 
 
 ## Installation
 
-Pour  ce projet vous devez installer Sass dans votre machine ou simplement dans le projet puis l'executer dans votre package.json
+Pour  ce projet vous devez installer Sass dans votre machine ou simplement dans le projet avec les dépendances puis l'executer depuis le fichier package.json
 
 ```bash
   npm install sass -g ou npm install sass --save-dev
